@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { dbService } from "../fbase";
 
-const Home = () => {
+const Home = ({ userObj }) => {
   const [gweet, setGweet] = useState("");
   const [gweets, setGweets] = useState([]);
 
-  const getGweets = async () => {
-    const dbGweets = await dbService.collection("gweets").get();
-    dbGweets.forEach((document) => {
-      const gweetObject = {
-        ...document.data(),
-        id: document.id,
-      };
-      setGweets((prev) => [gweetObject, ...prev]);
-    });
-  };
   useEffect(() => {
-    getGweets();
+    dbService.collection("gweets").onSnapshot((snapshot) => {
+      const gweetArray = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setGweets(gweetArray);
+    });
   }, []);
   const onSubmit = async (event) => {
     event.preventDefault();
     await dbService.collection("gweets").add({
-      gweet,
+      text: gweet,
       createdAt: Date.now(),
+      creatorId: userObj.uid,
     });
     setGweet("");
   };
@@ -47,7 +44,7 @@ const Home = () => {
       <div>
         {gweets.map((gweet) => (
           <div key={gweet.id}>
-            <h4>{gweet.gweet}</h4>
+            <h4>{gweet.text}</h4>
           </div>
         ))}
       </div>
