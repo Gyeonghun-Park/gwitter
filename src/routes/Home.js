@@ -6,7 +6,7 @@ import Gweet from "../components/Gweet";
 const Home = ({ userObj }) => {
   const [gweet, setGweet] = useState("");
   const [gweets, setGweets] = useState([]);
-  const [attachment, setAttachment] = useState();
+  const [attachment, setAttachment] = useState("");
 
   useEffect(() => {
     dbService.collection("gweets").onSnapshot((snapshot) => {
@@ -19,9 +19,6 @@ const Home = ({ userObj }) => {
   }, []);
   const onSubmit = async (event) => {
     event.preventDefault();
-    const fileRef = storageService.ref().child(`${userObj.uid}/${uuidv4()}`);
-    const response = await fileRef.putString(attachment, "data_url");
-    console.log(response);
     let attachmentUrl = "";
     if (attachment !== "") {
       const attachmentRef = storageService
