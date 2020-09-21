@@ -43,6 +43,14 @@ const Gweet = ({ gweetObj, isOwner }) => {
       ) : (
         <>
           <h4>{gweetObj.text}</h4>
+          {gweetObj.attachmentUrl && (
+            <img
+              src={gweetObj.attachmentUrl}
+              alt="gweet image"
+              width="50px"
+              height="50px"
+            />
+          )}
           {isOwner && (
             <>
               <button onClick={onDeleteClick}>Delete gweet</button>
