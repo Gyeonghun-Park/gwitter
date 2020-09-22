@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/gwitter/static/css/main.500bd03b.chunk.css",
-    "main.js": "/gwitter/static/js/main.11982278.chunk.js",
-    "main.js.map": "/gwitter/static/js/main.11982278.chunk.js.map",
+    "main.css": "/gwitter/static/css/main.4320eed4.chunk.css",
+    "main.js": "/gwitter/static/js/main.e6e0c7b5.chunk.js",
+    "main.js.map": "/gwitter/static/js/main.e6e0c7b5.chunk.js.map",
     "runtime-main.js": "/gwitter/static/js/runtime-main.292f2647.js",
     "runtime-main.js.map": "/gwitter/static/js/runtime-main.292f2647.js.map",
     "static/js/2.d41868c0.chunk.js": "/gwitter/static/js/2.d41868c0.chunk.js",
     "static/js/2.d41868c0.chunk.js.map": "/gwitter/static/js/2.d41868c0.chunk.js.map",
     "index.html": "/gwitter/index.html",
-    "precache-manifest.8b817294f7bf93545b20729c546db0d3.js": "/gwitter/precache-manifest.8b817294f7bf93545b20729c546db0d3.js",
+    "precache-manifest.72b0244f0001d72d70fa59d50f8585e3.js": "/gwitter/precache-manifest.72b0244f0001d72d70fa59d50f8585e3.js",
     "service-worker.js": "/gwitter/service-worker.js",
-    "static/css/main.500bd03b.chunk.css.map": "/gwitter/static/css/main.500bd03b.chunk.css.map",
+    "static/css/main.4320eed4.chunk.css.map": "/gwitter/static/css/main.4320eed4.chunk.css.map",
     "static/js/2.d41868c0.chunk.js.LICENSE.txt": "/gwitter/static/js/2.d41868c0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.292f2647.js",
     "static/js/2.d41868c0.chunk.js",
-    "static/css/main.500bd03b.chunk.css",
-    "static/js/main.11982278.chunk.js"
+    "static/css/main.4320eed4.chunk.css",
+    "static/js/main.e6e0c7b5.chunk.js"
   ]
 }
